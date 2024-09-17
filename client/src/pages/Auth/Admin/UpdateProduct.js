@@ -36,7 +36,7 @@ export default function UpdateProduct() {
     const getOneProduct = async () => {
         try {
             const slug = window.location.pathname.split('/').pop();
-            const { data } = await axios.get(`http://localhost:4000/api/v1/product/get-singProduct/${slug}`, { headers: { Authorization: token } });
+            const { data } = await axios.get(`https://my-ecommerce-smoky.vercel.app/api/v1/product/get-singProduct/${slug}`, { headers: { Authorization: token } });
 
             if (data.success) {
                 setForm({
@@ -68,7 +68,7 @@ data);
     // Fetch Categories Data
     const getCategories = async () => {
         try {
-            const { data } = await axios.get('http://localhost:4000/api/v1/category/get-categorys');
+            const { data } = await axios.get('https://my-ecommerce-smoky.vercel.app/api/v1/category/get-categorys');
             if (data.success) {
                 setCategories(data.AllCategories);
             }
@@ -102,7 +102,7 @@ data);
         formData.append('shipping', shipping);
 
         try {
-            const { data } = await axios.put(`http://localhost:4000/api/v1/product/update-product/${id}`, formData, {
+            const { data } = await axios.put(`https://my-ecommerce-smoky.vercel.app/api/v1/product/update-product/${id}`, formData, {
                 headers: {
                     Authorization: token,
                     'Content-Type': 'multipart/form-data'
