@@ -67,15 +67,14 @@ console.log(category);
                     <p className="card-text">Quantity: {prod.quantity}</p>
                     <p className="card-text">Price: ${prod.price}</p>
 
-                    <button
-                      className="btn btn-primary product-btn me-2"
-                      onClick={() => {
-                        nav(`/product/${prod.slug}`);
-                      }}
-                    >
-                      Show Details
-                    </button>
-                    <button className="btn btn-secondary product-btn">Add to cart</button>
+                   <button className="btn btn-primary  product-btn me-2"  onClick={()=>{nav(`/product/${prod.slug}`)}} >Show Details</button>
+                                    <button className="btn btn-secondary product-btn" 
+                                        onClick={()=>{
+                                            setCart([...cart,prod])
+                                            localStorage.setItem("cart",JSON.stringify([...cart,prod]))
+                                            toast.success("Item Was Added")
+                                        }}
+                                        >Add to cart</button>
                   </div>
                 </div>
               ))
