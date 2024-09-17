@@ -50,7 +50,7 @@ export default function CartPage() {
     //get payment getwat token
     const get_PaymentToken = async () => {
         try {
-            const { data } = await axios.get("http://localhost:4000/api/v1/product/braintree/token");
+            const { data } = await axios.get("https://my-ecommerce-smoky.vercel.app/api/v1/product/braintree/token");
             console.log(data.clientToken);
             setClientToken(data.clientToken)
         } catch (error) {
@@ -70,7 +70,7 @@ export default function CartPage() {
             console.log("this is nonce");
             
             console.log(nonce);
-const {data}= await axios.post("http://localhost:4000/api/v1/product/braintree/payment",{cart,nonce},{headers:{Authorization:token}});
+const {data}= await axios.post("https://my-ecommerce-smoky.vercel.app/api/v1/product/braintree/payment",{cart,nonce},{headers:{Authorization:token}});
 console.log(data);
 setLoading(false)
 localStorage.removeItem("cart")
