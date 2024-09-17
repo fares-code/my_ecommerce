@@ -18,7 +18,7 @@ export default function CreateCategory() {
   // Get All Categories
   const getCategories = async () => {
     try {
-      const { data } = await axios.get('http://localhost:4000/api/v1/category/get-categorys');
+      const { data } = await axios.get('https://my-ecommerce-smoky.vercel.app/api/v1/category/get-categorys');
       if (data.success) {
         setCategories(data.AllCategories);
       }
