@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*LOADIG*/
+.center-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;           /* Full viewport height */
+}
+
+/*NAV BAR CSS*/
+.navbar{
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 26px;
+  text-transform: uppercase;
+  box-shadow: 0 8px 6px -6px gray;
+border-bottom: 0.3px solid gray !important;
+}
+.nav-link{
+  font-weight: 700 !important;
+}
+.active{
+  text-decoration: underline;
+  
+}
+.nav-link-footer{
+  color: white;
+  text-decoration: none;
+  
+}
+/*FOOTER*/
+.footer{
+color: white;
+padding: 25px;
+background: linear-gradient(to right,#434343,#000000);
+}
+.footer p{
+  margin-left:750px;
+}
+.footer a{
+ color: white;
+ text-decoration: none;
+padding: 10px;
+
+}
+.footer a:hover{
+ color: rgb(115, 215, 231);
+border-bottom: solid wheat 3px;
+}
+/* Custom styles for the AdminDashboard component */
+
+.admin-dashboard {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-card {
+  margin-top: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+h3 {
+  font-weight: bold;
+}
+
+.text-muted {
+  color: #6c757d;
+}
+/*Admin menue*/
+/* Custom styles for active links */
+
+/* Sidebar container */
+/* Sidebar container */
+.sidebar-container {
+  height: 70vh; /* Adjust height as needed */
+  background-color: #f8f9fa; /* Light background color */
+  border-right: 1px solid #dee2e6; /* Border to separate sidebar from content */
+  padding: 20px;
+}
+
+/* List group styling */
+.list-group {
+  padding: 0;
+  margin: 0;
+}
+
+/* List group item styling */
+.list-group-item {
+  border: 0;
+  border-radius: 0;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Disabled item styling */
+.list-group-item.disabled {
+  background-color: #343a40; /* Dark background for the header */
+  color: white;
+  font-weight: bold;
+}
+
+/* Nav link styling */
+.nav-link {
+  color: #495057; /* Dark text color */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Active nav link styling */
+.nav-link.active {
+  color: #007bff; /* Highlight color for active link */
+  font-weight: bold;
+  background-color: #e9ecef; /* Light background color for the active link */
+  border-radius: 0.25rem; /* Rounded corners for the active link background */
+  padding: 10px; /* Adjust padding for a more prominent active state */
+}
+
+/* Hover effect for nav links */
+.nav-link:hover {
+  color: #0056b3; /* Slightly darker color on hover */
+}
+.homepage-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.filter-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-bottom: 200px !important;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.products-section {
+  padding-left: 20px;
+}
+
+.products-section h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #343a40;
+}
+
+.product-list {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .homepage-container {
+      flex-direction: column;
+  }
+
+  .filter-section, .products-section {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .product-list {
+      margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-section h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0 !important;
+  }
+
+  .product-list {
+      padding: 10px;
+  }
+}
+/* Container and header */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.search-result-header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Product Grid */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  width: 18rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Product Image */
+.product-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Product Buttons */
+.product-btn {
+  width: 100%;
+  font-weight: 500;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+/* Filter Section */
+.filter-section {
+  width: fit-content;
+}
+
+.reset-btn {
+  margin-top: 20px;
+}
+
+/* Section Title */
+.section-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Product List */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  width: 18rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Product Image */
+.product-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+/* Product Buttons */
+.product-btn {
+  width: 100%;
+  font-weight: 500;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Load More Button */
+.load-more-btn {
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #ffc107;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background-color: #e0a800;
+}
+.update-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  border: 2px solid #ffc107;   /* Outline warning color */
+}
+
+.update-btn:hover {
+  background-color: #ffc107;   /* Warning background on hover */
+  color: white;
+}
+
+.link-style {
+  text-decoration: none;
+  color: inherit;   /* Inherit the color of the button */
+}
+
+.link-style:hover {
+  color: white;     /* Change color on hover */
+}

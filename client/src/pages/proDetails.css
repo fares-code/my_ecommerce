@@ -1,0 +1,79 @@
+/* Main Product Section */
+.product-details-container {
+  display: flex;
+  gap: 30px; /* Reduced gap for a more compact look */
+  margin: 0 auto; /* Centering the container */
+  padding: 20px;
+  max-width: 1200px; /* Increased max-width for larger content */
+}
+
+.product-image-container {
+margin-left: -250px;
+  flex: 1; /* Allow image container to take up more space */
+  min-width: 500px; /* Increase maximum width of the image container */
+}
+
+.product-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.product-info {
+  flex: 2; /* Allow info container to take up more space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.product-info h5,
+.product-info h6,
+.product-info p {
+  margin: 10px 0;
+}
+
+.product-info button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+/* Related Products Section */
+.related-products-container {
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 2px solid #ddd; /* Thicker border for better separation */
+}
+
+.related-products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.related-product-item {
+  flex: 1 1 calc(33% - 20px); /* 3 items per row */
+  max-width: 300px;
+  text-align: center;
+}
+
+.related-product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.related-product-item h5 {
+  margin: 10px 0;
+}
+
+.related-product-item p {
+  font-size: 14px;
+}
