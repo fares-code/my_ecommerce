@@ -23,7 +23,7 @@ export default function CreateProduct() {
 
     const getCategories = async () => {
         try {
-            const { data } = await axios.get('http://localhost:4000/api/v1/category/get-categorys');
+            const { data } = await axios.get('https://my-ecommerce-smoky.vercel.app/api/v1/category/get-categorys');
             if (data.success) {
                 setCategories(data.AllCategories);
             }
@@ -54,7 +54,7 @@ export default function CreateProduct() {
         formData.append('shipping', shipping);
 
         try {
-            const { data } = await axios.post('http://localhost:4000/api/v1/product/create-product', formData, {
+            const { data } = await axios.post('https://my-ecommerce-smoky.vercel.app/api/v1/product/create-product', formData, {
                 headers: {
                     Authorization: token,
                     'Content-Type': 'multipart/form-data'
