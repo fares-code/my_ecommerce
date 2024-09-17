@@ -19,7 +19,7 @@ const nav =useNavigate()
     // Get all categories
     const getCategories = async () => {
         try {
-            const { data } = await axios.get('http://localhost:4000/api/v1/category/get-categorys');
+            const { data } = await axios.get('https://my-ecommerce-smoky.vercel.app/api/v1/category/get-categorys');
             if (data.success) {
                 setCategories(data.AllCategories);
             }
@@ -32,7 +32,7 @@ const nav =useNavigate()
     const getAllProducts = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`http://localhost:4000/api/v1/product/product-list/${page}`);
+            const res = await axios.get(`https://my-ecommerce-smoky.vercel.app/api/v1/product/product-list/${page}`);
             setProducts(res.data.products);
             setLoading(false);
         } catch (error) {
@@ -45,7 +45,7 @@ const nav =useNavigate()
     const getFilteredProducts = async () => {
         try {
             setLoading(true);
-            const res = await axios.post("http://localhost:4000/api/v1/product/product-filters", { checked, radio });
+            const res = await axios.post("https://my-ecommerce-smoky.vercel.app/api/v1/product/product-filters", { checked, radio });
             setProducts(res.data.products);
             setLoading(false);
         } catch (error) {
@@ -59,7 +59,7 @@ const nav =useNavigate()
     const GetNumberOfProducts = useCallback(async () => {
         try {
             setLoading(true);
-            const res = await axios.get("http://localhost:4000/api/v1/product/product-count");
+            const res = await axios.get("https://my-ecommerce-smoky.vercel.app/api/v1/product/product-count");
             setTotal(res.data.total);
             setLoading(false);
         } catch (error) {
@@ -73,7 +73,7 @@ const nav =useNavigate()
     const LoadMore = async () => {
         try {
             setLoading(true);
-            const res = await axios.get(`http://localhost:4000/api/v1/product/product-list/${page}`);
+            const res = await axios.get(`https://my-ecommerce-smoky.vercel.app/api/v1/product/product-list/${page}`);
             setProducts([...products, ...res.data.products]);
             setLoading(false);
         } catch (error) {
