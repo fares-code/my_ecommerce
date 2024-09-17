@@ -15,7 +15,7 @@ export default function Products() {
     const GetAllProducts = async function () {
         try {
             setLoading(true)
-            const res = await axios.get("http://localhost:4000/api/v1/product/get-products", {
+            const res = await axios.get("https://my-ecommerce-smoky.vercel.app/api/v1/product/get-products", {
                 headers: {
                     Authorization: token
                 }
