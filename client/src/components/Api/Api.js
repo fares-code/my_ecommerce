@@ -1,5 +1,5 @@
-export const BASEURL="http://localhost:4000/api/v1/auth";
-export const NEWBASEURL="http://localhost:4000/api/v1/auth";
+export const BASEURL="https://my-ecommerce-smoky.vercel.app/api/v1/auth";
+export const NEWBASEURL="https://my-ecommerce-smoky.vercel.app/api/v1/auth";
 
 export const REGISTER="register";
 export const UPDATE="update";
