@@ -21,7 +21,7 @@ export default function AdminOrders() {
 
   const getAllOrders = async () => {
       try {
-          const { data } = await axios.get("http://localhost:4000/api/v1/product/all-orders", {
+          const { data } = await axios.get("https://my-ecommerce-smoky.vercel.app/api/v1/product/all-orders", {
               headers: { Authorization: token }
           });
           setOrders(data); // Update state with fetched orders
