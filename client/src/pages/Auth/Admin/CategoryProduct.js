@@ -19,7 +19,7 @@ console.log(category);
   const getproductsByCategory = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`http://localhost:4000/api/v1/product/product-category/${slug}`);
+      const { data } = await axios.get(`https://my-ecommerce-smoky.vercel.app/api/v1/product/product-category/${slug}`);
       setLoading(false);
       setCategory(data.category); // Wrap category in array for mapping
       setProducts(data.products);
