@@ -19,7 +19,7 @@ console.log(relatedProducts);
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:4000/api/v1/product/get-singProduct/${params.slug}`
+        `https://my-ecommerce-smoky.vercel.app/api/v1/product/get-singProduct/${params.slug}`
       );
       setProduct(data.oneProduct);
       RelatedProducts(data.oneProduct._id,data.oneProduct.category._id);
@@ -31,7 +31,7 @@ console.log(relatedProducts);
   //Get related Products
   const RelatedProducts = async(pid,cid)=>{
     try {
-      const res= await axios.get(`http://localhost:4000/api/v1/product/related-product/${pid}/${cid}`)
+      const res= await axios.get(`https://my-ecommerce-smoky.vercel.app/api/v1/product/related-product/${pid}/${cid}`)
       console.log(res.data.products);
       setRelatedProducts(res.data.products)
       
