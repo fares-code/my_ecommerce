@@ -9,7 +9,7 @@ export default function SearchForm(){
     const HandelSubmit = async(e)=>{
         e.preventDefault()
         try {
-           const{data}= await axios.get(`http://localhost:4000/api/v1/product/search/${value.keyword}`);
+           const{data}= await axios.get(`https://my-ecommerce-smoky.vercel.app/api/v1/product/search/${value.keyword}`);
            console.log(data.result);
            console.log(value);
            
