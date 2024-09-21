@@ -2,7 +2,7 @@ import axios from "axios";
 import Layout from "../../../components/layout/layout";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useCart } from "../../components/Context/Cart.js";
+import { useCart } from "../../../components/Context/Cart";
 export default function CategoryProduct() {
   const { slug } = useParams();
   const [products, setProducts] = useState([]);
