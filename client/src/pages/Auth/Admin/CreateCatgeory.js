@@ -36,7 +36,7 @@ export default function CreateCategory() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:4000/api/v1/category/create-category", { name }, {
+      const { data } = await axios.post("https://my-ecommerce-smoky.vercel.app/api/v1/category/create-category", { name }, {
         headers: {
           Authorization: token
         }
@@ -63,7 +63,7 @@ export default function CreateCategory() {
       return;
     }
     try {
-      await axios.put(`http://localhost:4000/api/v1/category/update-category/${selected._id}`, { name: updateName }, {
+      await axios.put(`https://my-ecommerce-smoky.vercel.app/api/v1/category/update-category/${selected._id}`, { name: updateName }, {
         headers: {
           Authorization: token
         }
@@ -82,7 +82,7 @@ export default function CreateCategory() {
   // Handle Delete
   const handleDelete = async (PID) => {
     try {
-      await axios.delete(`http://localhost:4000/api/v1/category/delete-category/${PID}`, {
+      await axios.delete(`https://my-ecommerce-smoky.vercel.app/api/v1/category/delete-category/${PID}`, {
         headers: {
           Authorization: token
         }
